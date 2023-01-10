@@ -21,9 +21,17 @@ form.addEventListener("submit", (e) => {
         { nome: user, idade: age }
     )
 
-    pessoas.map((item) =>  {
+        result.innerHTML = ""
 
-     
+    pessoas.map((item) => {
+
+        let NewUser = document.createElement("div")
+        NewUser.classList.add("content")
+        NewUser.innerHTML = `
+            <p>Usuário: ${item.nome}</p>
+            <p>Idade: ${item.idade} anos</p>
+     `
+        result.appendChild(NewUser)
     })
 
 
